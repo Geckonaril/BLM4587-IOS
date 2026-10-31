@@ -1,0 +1,16 @@
+# Flutter
+**/build/
+.dart_tool/
+.flutter-plugins-dependencies
+
+# .NET
+**/bin/
+**/obj/
+
+# IDE
+.vs/
+.idea/
+
+# Secrets
+.env
+.env.*

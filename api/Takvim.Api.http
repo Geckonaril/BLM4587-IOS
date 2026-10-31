@@ -1,0 +1,6 @@
+@Takvim.Api_HostAddress = http://localhost:5153
+
+GET {{Takvim.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
