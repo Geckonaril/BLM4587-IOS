@@ -65,4 +65,18 @@ GET http://localhost:5080/api/health
 - `Navigator.push` ve `Navigator.pop` ile ekranlar arası gezinme sağlandı.
 - Gerçek Android cihaz üzerinde ekran testleri gerçekleştirildi.
 
-**Sonraki hafta:** JWT tabanlı kullanıcı kayıt/giriş sistemi, kullanıcı rolleri ve Flutter kimlik doğrulama ekranları.
+### Hafta 3 — Kullanıcı Kimlik Doğrulama ve Yetkilendirme
+
+- ASP.NET Core Web API üzerinde kullanıcı kayıt ve giriş endpoint'leri geliştirildi.
+- Kullanıcı parolalarının güvenli şekilde hashlenerek PostgreSQL veritabanında saklanması sağlandı.
+- JWT tabanlı kimlik doğrulama sistemi oluşturuldu.
+- `User` ve `Admin` rolleri tanımlandı; rol bazlı API erişim kontrolleri uygulandı.
+- API üzerinden `401 Unauthorized`, `403 Forbidden` ve `200 OK` yanıtlarıyla yetkilendirme testleri gerçekleştirildi.
+- Flutter tarafında Takvim+ tasarımına uygun giriş ve kayıt ekranları geliştirildi.
+- Form doğrulamaları eklenerek hatalı e-posta ve parola girişleri kontrol edildi.
+- Flutter ile Web API arasında HTTP üzerinden kayıt ve giriş entegrasyonu sağlandı.
+- JWT bilgilerinin `flutter_secure_storage` kullanılarak güvenli biçimde saklanması ve oturumun korunması sağlandı.
+- Kullanıcı çıkış yapma özelliği eklendi.
+- Gerçek Android cihaz üzerinde kayıt, giriş ve rol yetkilendirme işlemleri test edildi.
+
+**Sonraki Hafta:** Etkinlik yönetimi için RESTful Web API CRUD endpoint'lerinin geliştirilmesi, Swagger/OpenAPI üzerinden test edilmesi ve Flutter uygulamasında etkinlik ekleme, listeleme, güncelleme ve silme işlemlerinin uygulanması.

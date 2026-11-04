@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'day_detail_screen.dart';
 
 class CalendarScreen extends StatefulWidget {
-  const CalendarScreen({super.key});
+  final VoidCallback? onLogout;
+
+  const CalendarScreen({super.key, this.onLogout});
 
   @override
   State<CalendarScreen> createState() => _CalendarScreenState();
@@ -308,6 +310,14 @@ class _CalendarScreenState extends State<CalendarScreen> {
                           label: const Text(
                             'Bugün',
                             style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        IconButton(
+                          tooltip: 'Çıkış yap',
+                          onPressed: widget.onLogout,
+                          icon: const Icon(
+                            Icons.logout_rounded,
+                            color: Colors.white,
                           ),
                         ),
                       ],

@@ -1,21 +1,42 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:takvim_mobile/main.dart';
+import 'package:takvim_mobile/screens/auth_screen.dart';
 
 void main() {
-  testWidgets('Takvim+ ana ekranı açılıyor', (tester) async {
-    await tester.pumpWidget(const TakvimApp());
+  testWidgets('Takvim+ giriş ekranı gösteriliyor',
+      (tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        home: AuthScreen(
+          onAuthenticated: () {},
+        ),
+      ),
+    );
 
-    // Uygulama başlığı
     expect(find.text('Takvim+'), findsOneWidget);
+    expect(find.text('Giriş Yap'), findsOneWidget);
+    expect(
+      find.text('Hesabın yok mu? Kayıt ol'),
+      findsOneWidget,
+    );
+  });
 
-    // Bugün butonu
-    expect(find.widgetWithText(TextButton, 'Bugün'), findsOneWidget);
+  testWidgets('Kayıt ekranına geçiş çalışıyor',
+      (tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        home: AuthScreen(
+          onAuthenticated: () {},
+        ),
+      ),
+    );
 
-    // Ay değiştirme butonları
-    expect(find.byIcon(Icons.chevron_left_rounded), findsOneWidget);
+    await tester.tap(find.text('Hesabın yok mu? Kayıt ol'));
+    await tester.pumpAndSettle();
 
-    expect(find.byIcon(Icons.chevron_right_rounded), findsOneWidget);
+    expect(find.text('Hesap Oluştur'), findsOneWidget);
+    expect(find.text('Ad Soyad'), findsOneWidget);
   });
 }
