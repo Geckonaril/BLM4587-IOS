@@ -52,9 +52,17 @@ GET http://localhost:5080/api/health
 - ASP.NET Core Web API projesi oluşturuldu.
 - API health endpoint'i yazıldı ve test edildi.
 
-## Sonraki Adımlar
+### Hafta 2 — Veritabanı ve Takvim Arayüzü
 
-- PostgreSQL veritabanı tasarımı
-- Entity Framework Core entegrasyonu
-- Takvim arayüzünün geliştirilmesi
-- Kullanıcı ve etkinlik yönetimi
+- PostgreSQL üzerinde `takvim_flutter` veritabanı oluşturuldu.
+- Entity Framework Core ve Npgsql entegrasyonu yapıldı.
+- Users, Calendars, Events, Categories ve Reminders tabloları modellendi.
+- Tablolar arasındaki bire-çok ilişkiler tanımlandı.
+- `InitialCreate` migration oluşturuldu ve veritabanına uygulandı.
+- Flutter aylık takvim ekranı geliştirildi.
+- Aylar arasında geçiş ve bugüne dönme özellikleri eklendi.
+- Gün Detayı ekranı oluşturuldu.
+- `Navigator.push` ve `Navigator.pop` ile ekranlar arası gezinme sağlandı.
+- Gerçek Android cihaz üzerinde ekran testleri gerçekleştirildi.
+
+**Sonraki hafta:** JWT tabanlı kullanıcı kayıt/giriş sistemi, kullanıcı rolleri ve Flutter kimlik doğrulama ekranları.
